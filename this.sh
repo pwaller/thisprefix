@@ -93,7 +93,7 @@ unuse_prefix()
     remove_path PKG_CONFIG_PATH "${1}/lib/pkgconfig"    
 }
 
-THIS_DIR="$( cd -P "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+THIS_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 case "${1-}" in
 "")
