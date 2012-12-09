@@ -1,8 +1,10 @@
 prepend_path()
 {
-	local VAR="${1}"
-	local NEWPATH="${2}"
-	
+    local VAR="${1}"
+    local NEWPATH="${2}"
+    
+    [[ -d "${NEWPATH}" ]] || return 0
+    
     SAVED_IFS="$IFS"
     IFS=:
     
